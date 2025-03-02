@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee &amp; Coding - Support</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+ 
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="background-wrapper">
+   
+    <img 
+      src="images/image7.webp" 
+      alt="Support Background" 
+      class="bg-image"
+    >
+  </div>
+
+  
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">Coffee &amp; Coding</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="login.html" class="btn-login">SIGN UP</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <main class="support-container container">
+  
+    <div class="support-info">
+      <h1>Contact us</h1>
+      <p>
+        Need to get in touch with us? Fill out the form or reach out to our 
+        <a href="index.html#contact">department email</a>.
+      </p>
+    </div>
+
+   
+    <div class="support-form-container">
+      <form class="support-form" action="support_process.php" method="post">
+        <div class="form-row">
+          <label for="first-name">First name*</label>
+          <input type="text" id="first-name" name="first_name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="last-name">Last name*</label>
+          <input type="text" id="last-name" name="last_name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">What can we help you with?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="request-btn">
+          Send your request
+          <span class="arrow-icon">&rarr;</span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+ 
+  <div class="support-bottom-bar"></div>
+
+  
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 Coffee &amp; Coding | All Rights Reserved</p>
+      <div class="social-links">
+        <a href="https://github.com/your-username" target="_blank">
+          <img src="images/github_2504911.png" alt="GitHub" class="social-icon">
+        </a>
+        
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

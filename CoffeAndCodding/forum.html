@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="forum-style.css">
 </head>
 <body>
   
@@ -18,35 +19,56 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="activities.html">Activities</a></li>
-       
         <li><a href="forum.html" class="active">Forum</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="support.html">Support</a></li>
         <li><a href="index.html#about">About Us</a></li>
         <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="login.html" class="btn-login">SİGN UP</a></li>
+        <li><a href="login.html" class="btn-login">SIGN UP</a></li>
       </ul>
     </div>
   </nav>
 
-
   <main class="container">
     <h1>Forum</h1>
     <p>Join our community to discuss, ask questions, and share your coding experiences.</p>
-   
+
+    <div class="forum-container">
+      <div class="forum-header">
+        <button class="btn" onclick="location.href='login.html'">Login</button>
+        <button class="btn" onclick="location.href='register.html'">Register</button>
+      </div>
+
+      <div class="forum-actions">
+        <button class="btn new-topic">Start New Topic</button>
+      </div>
+
+      <div class="forum-topics">
+        <div class="topic">
+          <h3><a href="topic1.html">Forum kısmı böyle gözükecek</a></h3>
+          <p>Started by <span class="user">Cemil</span> | 10 Replies</p>
+        </div>
+        <div class="topic">
+          <h3><a href="topic2.html">Sitemizin bir taslağı</a></h3>
+          <p>Started by <span class="user">Talha</span> | 15 Replies</p>
+        </div>
+        <div class="topic">
+          <h3><a href="topic3.html">Kodlarımızı burada tartışabiliriz!</a></h3>
+          <p>Started by <span class="user">Ahmet</span> | 8 Replies</p>
+        </div>
+      </div>
+    </div>
   </main>
 
-
-<footer class="footer">
-  <div class="container footer-content">
-    <p>&copy; 2025 Coffee &amp; Coding | All Rights Reserved</p>
-    <div class="social-links">
-      <a href="https://github.com/your-username" target="_blank">
-        <img src="images/github_2504911.png" alt="GitHub" class="social-icon">
-      </a>
-      
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 Coffee &amp; Coding | All Rights Reserved</p>
+      <div class="social-links">
+        <a href="https://github.com/your-username" target="_blank">
+          <img src="images/github_2504911.png" alt="GitHub" class="social-icon">
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>

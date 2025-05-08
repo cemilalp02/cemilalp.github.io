@@ -1,0 +1,17 @@
+<?php
+$user = $_GET['user'] ?? '';
+$tFile = __DIR__ . '/forum_topics.json';
+$topics = file_exists($tFile) ? json_decode(file_get_contents($tFile), true) : [];
+?>
+<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title><?=$user?> – Profile</title>
+<link rel=\"stylesheet\" href=\"style.css\"></head><body>
+<nav class=\"navbar\"><div class=\"container nav-content\">
+  <a href=\"index.php\" class=\"logo\">Coffee &amp; Coding</a>
+</div></nav>
+<main class=\"container\">
+  <h1>Posts by <?=$user?></h1>
+  <?php foreach ($topics as $t): if ($t['author']===$user): ?>
+    <div class=\"topic-card\"><a href=\"topic.php?id=<?=$t['id']?>\"><?=$t['title']?></a></div>
+  <?php endif; endforeach; ?>
+</main>
+</body></html>

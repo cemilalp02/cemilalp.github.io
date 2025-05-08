@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up – Coffee & Coding</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <img src="images/image6.gif" alt="Laptop" class="login-image">
+      <h2 class="login-title">Sign Up</h2>
+
+      <!-- KAYIT FORMU -->
+      <form action="signup.php" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input name="name" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="surname">Surname</label>
+          <input name="surname" id="surname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input name="phone" id="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+
+        <button type="submit" class="login-button">Create Account</button>
+      </form>
+
+      <p style="margin-top:1rem;">Already have an account?
+        <a href="login.html">Log in</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

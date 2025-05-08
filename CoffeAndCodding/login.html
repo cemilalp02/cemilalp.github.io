@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Coffee & Coding – Log In page -->
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Log In – Coffee & Coding</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Centered card -->
+  <div class="login-container">
+    <div class="login-card">
+      <!-- Same decorative image as signup page (değiştirmek istersen yolu düzenle) -->
+      <img src="images/image6.gif" alt="Laptop" class="login-image">
+
+      <h2 class="login-title">Log In</h2>
+
+      <!-- Entrance Form -->
+      <form action="login.php" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email"
+                 id="email"
+                 name="email"
+                 placeholder="Enter your email"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password"
+                 id="password"
+                 name="password"
+                 placeholder="Enter your password"
+                 required>
+        </div>
+
+        <button type="submit" class="login-button">Log In</button>
+      </form>
+
+      <p style="margin-top:1rem;">
+        Don’t have an account?
+        <a href="signup.html">Sign up</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

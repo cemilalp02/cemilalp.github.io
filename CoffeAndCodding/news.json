@@ -1,0 +1,16 @@
+{
+  "news": [
+    {
+      "title": "Coffee & Coding Meetup #12 announced!",
+      "url": "https://example.com/meetup12"
+    },
+    {
+      "title": "New Tutorial: Building REST APIs with Node.js",
+      "url": "https://example.com/node-rest-tutorial"
+    },
+    {
+      "title": "Community Spotlight: April 2025 Project Winners",
+      "url": "https://example.com/april-spotlight"
+    }
+  ]
+}

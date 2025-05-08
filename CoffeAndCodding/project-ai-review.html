@@ -1,31 +1,55 @@
-<?php
-session_start();
-if (!isset($_SESSION['user'])) {
-    header('Location: login.html'); exit;
-}
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405); exit;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Code Review Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="index.php" class="logo">Coffee & Coding</a>
+      <ul class="nav-links">
+        <li><a href="index.php">Home</a></li>
+        <!-- ... other links ... -->
+        <li><a href="projects.php" class="active">Projects</a></li>
+      </ul>
+    </div>
+  </nav>
 
-$topic_id = trim($_POST['topic_id']);
-$content  = trim($_POST['content']);
-$author   = $_SESSION['user']['name'] ?? $_SESSION['user']['email'];
-$ts       = date('c');
+  <main class="container">
+    <h1>AI-Powered Code Review Bot</h1>
+    <p>This project implements an automated code review assistant using GPT-based AI models. It integrates with GitHub via webhooks to analyze pull requests and provide feedback.</p>
 
-// Append reply
-$postsFile = __DIR__ . '/forum_posts.json';
-$posts = file_exists($postsFile)
-    ? json_decode(file_get_contents($postsFile), true)
-    : [];
-$posts[] = [
-    'id'         => uniqid(),
-    'topic_id'   => $topic_id,
-    'content'    => $content,
-    'author'     => $author,
-    'created_at' => $ts
-];
-file_put_contents($postsFile, json_encode($posts, JSON_PRETTY_PRINT));
+    <h2>Features</h2>
+    <ul>
+      <li>Automatic analysis of coding standards</li>
+      <li>Identification of potential bugs and security issues</li>
+      <li>Inline comments on pull requests</li>
+      <li>Customizable rule set</li>
+    </ul>
 
-header("Location: topic.php?id=$topic_id");
-exit;
-s
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Python &mdash; Data processing and rule enforcement</li>
+      <li>Node.js &mdash; GitHub webhook server</li>
+      <li>OpenAI GPT API &mdash; Natural language analysis</li>
+      <li>HTML/CSS &mdash; Pull request comment integration UI</li>
+    </ul>
+
+    <h2>Screenshots</h2>
+    <img src="images/Aİ.png" alt="Dashboard screenshot" class="project-image">
+    <img src="images/Aİ2.png" alt="Inline comment example" class="project-image">
+
+    <h2>Demo</h2>
+    <p>Try the live demo <a href="#">here</a>.</p>
+
+    <p><a href="projects.php" class="btn-secondary">← Back to Projects</a></p>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Coffee & Coding</p>
+  </footer>
+</body>
+</html>

@@ -928,30 +928,31 @@ html, body {
   }
 }
 
-/* Apply special animations to AI Review project images */
-.project-coffeeshop .project-image {
-  animation: aiSlideIn 0.8s ease-out forwards, aiGlow 2s infinite;
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.project-coffeeshop .project-image:hover {
-  transform: scale(1.05) rotate(1deg);
-  border-color: rgba(0, 255, 255, 0.8);
-}
-
-.project-coffeeshop, .project-image:nth-child(2) {
-  animation-delay: 0.3s;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: url("images/forum_bg.jpg") center / cover no-repeat fixed,
-              linear-gradient(135deg,#ece9e6 0%,#ffffff 100%); /* yedek */
-  opacity: 0.15; 
-}
-
-
-
+/* =======================================================
+   Forum Page Background
+   Only applies when <body class="forum-page">
+   ======================================================= */
+   body.forum-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url("images/forum_bg.jpg") center / cover no-repeat fixed,
+                linear-gradient(135deg,#ece9e6 0%,#ffffff 100%);
+    opacity: 0.15;
+  }
+  
+  /* =======================================================
+     Projects Page Background
+     Only applies when <body class="projects-page">
+     ======================================================= */
+  body.projects-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+      url("images/projects_bg.jpg") center/cover no-repeat fixed;
+  }
+  
